@@ -1,7 +1,9 @@
-import Image from 'next/image'
-
-import styles from './page.module.css'
+import { Typography } from '@/components/ui/typography'
 
 export default function Home() {
-  return <main className={styles.main}>Home</main>
+  return (
+    <main>
+      <Typography variant={'h1'}>Home</Typography>{' '}
+    </main>
+  )
 }
