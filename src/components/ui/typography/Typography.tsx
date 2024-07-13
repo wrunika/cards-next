@@ -70,4 +70,4 @@ const Variants = {
   subtitle2: 'p',
 } as const
 
-type Variant = keyof typeof Variants
+export type Variant = keyof typeof Variants
