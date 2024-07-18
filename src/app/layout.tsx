@@ -1,5 +1,9 @@
 import type { Metadata } from 'next'
 
+import { ReactNode } from 'react'
+
+import Header from '@/components/header/header'
+
 import '../styles/index.scss'
 
 export const metadata: Metadata = {
@@ -10,11 +14,14 @@ export const metadata: Metadata = {
 export default function RootLayout({
   children,
 }: Readonly<{
-  children: React.ReactNode
+  children: ReactNode
 }>) {
   return (
     <html lang={'en'}>
-      <body>{children}</body>
+      <body>
+        <Header isAuth={false} />
+        {children}
+      </body>
     </html>
   )
 }
